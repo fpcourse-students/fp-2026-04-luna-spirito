@@ -8,7 +8,7 @@
   outputs = inputs: {
     devShells = builtins.mapAttrs (system: pkgs: {
       default = with pkgs; mkShell {
-        packages = [ cabal-install ghc hlint ];
+        packages = [ cabal-install ghc hlint haskell-language-server ];
       };
     }) inputs.nixpkgs.legacyPackages;
   };
